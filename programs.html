@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#f6f7ff",
+                        "surface-bright": "#f9f9ff",
+                        "on-primary-fixed": "#410002",
+                        "primary": "#b70011",
+                        "inverse-primary": "#ffb4ab",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdad6",
+                        "on-secondary-fixed-variant": "#173bab",
+                        "background": "#f9f9ff",
+                        "on-surface": "#121c2a",
+                        "secondary-container": "#708cfd",
+                        "on-primary-fixed-variant": "#93000b",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#dc2626",
+                        "tertiary": "#505a6a",
+                        "on-surface-variant": "#5c403c",
+                        "tertiary-fixed": "#d9e3f7",
+                        "surface-tint": "#bf0715",
+                        "secondary-fixed-dim": "#b8c4ff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e6eeff",
+                        "secondary": "#3755c3",
+                        "tertiary-container": "#687284",
+                        "surface-dim": "#d0daef",
+                        "on-secondary-container": "#00217a",
+                        "surface-container-low": "#eff3ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-tertiary-fixed-variant": "#3d4757",
+                        "on-primary-container": "#fff6f5",
+                        "on-secondary-fixed": "#001453",
+                        "outline": "#916f6b",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#e6bdb8",
+                        "surface": "#f9f9ff",
+                        "surface-container-high": "#dee9fd",
+                        "inverse-surface": "#273140",
+                        "secondary-fixed": "#dde1ff",
+                        "on-background": "#121c2a",
+                        "on-tertiary-fixed": "#121c2a",
+                        "tertiary-fixed-dim": "#bdc7db",
+                        "surface-variant": "#d9e3f7",
+                        "surface-container-highest": "#d9e3f7",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#ffb4ab"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .wizard-step-active {
+            border-color: #b70011;
+            color: #b70011;
+        }
+        .wizard-shadow {
+            box-shadow: 0 20px 50px -12px rgba(18, 28, 42, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(18,28,42,0.06)]">
+<div class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto w-full">
+<div class="text-2xl font-black text-red-700 uppercase tracking-tighter font-headline">кмт</div>
+<nav class="hidden md:flex items-center gap-8 font-headline tracking-tight font-bold">
+<a class="text-red-700 border-b-2 border-red-700 pb-1" href="#">Программы</a>
+<a class="text-slate-700 hover:text-red-600 transition-colors" href="#">Поступление</a>
+<a class="text-slate-700 hover:text-red-600 transition-colors" href="#">Наука</a>
+<a class="text-slate-700 hover:text-red-600 transition-colors" href="#">Жизнь колледжа</a>
+<a class="text-slate-700 hover:text-red-600 transition-colors" href="#">О нас</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-6 py-2 rounded-md bg-slate-100 text-slate-900 font-bold hover:bg-slate-200 transition-all active:scale-95">
+                    Контакты
+                </button>
+<button class="px-6 py-2 rounded-md bg-primary text-on-primary font-bold shadow-lg hover:scale-105 transition-transform duration-200 ease-out active:opacity-80">
+                    Подать заявку
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24">
+<section class="max-w-screen-2xl mx-auto px-8 mb-16">
+<div class="grid md:grid-cols-2 gap-12 items-end">
+<div>
+<span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Навигатор карьеры</span>
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter leading-[0.9] mb-6">
+                        Специальности <br/><span class="text-primary">и программы</span> обучения.
+                    </h1>
+</div>
+<div class="pb-2">
+<p class="text-lg text-slate-600 leading-relaxed max-w-md">
+                        Не знаете, что выбрать? Наш интерактивный помощник подберет идеальную программу обучения на основе ваших интересов и навыков.
+                    </p>
+</div>
+</div>
+</section>
+<section class="max-w-screen-2xl mx-auto px-8 mb-16">
+<div class="bg-white rounded-3xl wizard-shadow p-1 border border-slate-100 overflow-hidden">
+<div class="grid lg:grid-cols-12 min-h-[500px]">
+<div class="lg:col-span-3 bg-slate-50 p-8 flex flex-col justify-between border-r border-slate-100">
+<div>
+<h3 class="font-headline font-bold text-xl mb-10 text-slate-900">Ваш путь к успеху</h3>
+<div class="space-y-8">
+<div class="flex items-center gap-4 group cursor-default">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wider">Шаг 1</p>
+<p class="text-sm font-semibold text-slate-700">Интересы</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group opacity-40">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-slate-300 text-slate-400 flex items-center justify-center font-bold text-sm">2</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Шаг 2</p>
+<p class="text-sm font-semibold text-slate-700">Навыки</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group opacity-40">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-slate-300 text-slate-400 flex items-center justify-center font-bold text-sm">3</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Шаг 3</p>
+<p class="text-sm font-semibold text-slate-700">Приоритеты</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-red-50 rounded-2xl">
+<p class="text-xs text-red-800 font-medium leading-relaxed">Система проанализирует 12 направлений и выделит наиболее подходящие для вас.</p>
+</div>
+</div>
+<div class="lg:col-span-9 p-8 md:p-12 flex flex-col">
+<div class="mb-10">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">Вопрос 1 из 3</span>
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-slate-900 mb-4">Что вас больше всего привлекает в работе?</h2>
+<p class="text-slate-500 text-lg">Выберите наиболее близкое вам направление деятельности.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow">
+<button class="flex items-center p-6 rounded-2xl border-2 border-slate-100 hover:border-primary/30 hover:bg-red-50/30 transition-all text-left group">
+<div class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mr-5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-slate-600 group-hover:text-primary">engineering</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Техника и механизмы</h4>
+<p class="text-xs text-slate-500 leading-snug">Ремонт, сборка и управление сложными машинами</p>
+</div>
+</button>
+<button class="flex items-center p-6 rounded-2xl border-2 border-slate-100 hover:border-primary/30 hover:bg-red-50/30 transition-all text-left group">
+<div class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mr-5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-slate-600 group-hover:text-primary">route</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Логистика и движение</h4>
+<p class="text-xs text-slate-500 leading-snug">Организация потоков и планирование маршрутов</p>
+</div>
+</button>
+<button class="flex items-center p-6 rounded-2xl border-2 border-slate-100 hover:border-primary/30 hover:bg-red-50/30 transition-all text-left group">
+<div class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mr-5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-slate-600 group-hover:text-primary">bolt</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Энергия и IT</h4>
+<p class="text-xs text-slate-500 leading-snug">Управление электросетями и автоматика</p>
+</div>
+</button>
+<button class="flex items-center p-6 rounded-2xl border-2 border-slate-100 hover:border-primary/30 hover:bg-red-50/30 transition-all text-left group">
+<div class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mr-5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-slate-600 group-hover:text-primary">groups</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Сервис и люди</h4>
+<p class="text-xs text-slate-500 leading-snug">Работа с пассажирами и клиентский сервис</p>
+</div>
+</button>
+</div>
+<div class="mt-12 flex justify-between items-center pt-8 border-t border-slate-100">
+<button class="px-8 py-3 text-slate-400 font-bold text-sm uppercase tracking-wider flex items-center gap-2" disabled="">
+<span class="material-symbols-outlined">west</span> Назад
+                            </button>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-xl bg-slate-100 text-slate-900 font-bold text-sm uppercase tracking-wider hover:bg-slate-200 transition-all">
+                                    Пропустить
+                                </button>
+<button class="px-10 py-3 rounded-xl bg-primary text-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-red-200 hover:translate-y-[-2px] transition-all">
+                                    Далее
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+<h2 class="text-2xl font-headline font-bold text-slate-900 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    Рекомендованные программы
+                </h2>
+<div class="flex items-center gap-4 text-sm font-bold">
+<span class="text-slate-400">Сортировать по:</span>
+<button class="text-primary border-b-2 border-primary">Релевантности</button>
+<button class="text-slate-500 hover:text-primary transition-colors">Сроку обучения</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="group bg-white rounded-2xl border-2 border-primary/20 p-6 flex flex-col lg:flex-row items-center gap-8 transition-all hover:border-primary hover:shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 px-6 py-2 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl">98% Соответствие</div>
+<div class="w-full lg:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+<img alt="Машинист" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjtkztKhUWlMbRW7Ezle-xP6c3wtlXHH5sF1k4r51WAuww2m6oNGBRQh-wUniuUyvCHlKa_a7HkpXJxo5PeKz2AD73LYsYfpsCKGISP5Fdd6lpNsPhrgpfMyhvms6QletDeAGdMH0dVd8x1-4fuCDrhUTwGxci1j6BJvrhMrVdWzBT3hpU17WaGFUFeM978FSWVoP4Ft2zw775TsoyMNjkChhHm0I2-8EFei9CCfHMDEL6ll8EWRrXMcgc3yAdd4MDfG4phF3x_pM"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">train</span>
+<span class="text-[10px] font-black tracking-widest uppercase text-secondary">Транспорт • Железнодорожный</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-slate-900 mb-2">Машинист локомотива</h3>
+<p class="text-slate-500 text-sm max-w-2xl">Высокооплачиваемая профессия для тех, кто любит технику и ответственность. Управление поездами метро и РЖД с использованием современных систем автоведения.</p>
+</div>
+<div class="w-full lg:w-64 border-l border-slate-100 pl-8 flex flex-col justify-center gap-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold text-slate-400">Срок обучения:</span>
+<span class="text-sm font-bold text-slate-900">3г 10мес</span>
+</div>
+<button class="w-full py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-primary transition-all">Узнать больше</button>
+</div>
+</div>
+<div class="group bg-white rounded-2xl border border-slate-200 p-6 flex flex-col lg:flex-row items-center gap-8 transition-all hover:border-primary/50 hover:shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 px-6 py-2 bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl">85% Соответствие</div>
+<div class="w-full lg:w-48 h-32 rounded-xl overflow-hidden shrink-0 grayscale hover:grayscale-0 transition-all">
+<img alt="Техник" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX4kbWlDuwR994ki6TH8rYVM58q7UpN4ay_dt4S9suI4HfZ3df0NSLn4Sac1OhSs1DOIZNRDpSQCtUDV2nEk7T3ErWgwBO2gg8bWiFgvQeHClzPjYAJSSlBigSRhPtEbRs5M8UuvYqsDtpY1o-nYCIQoIrmkCGRWf5gst_4-EomjPX8YektKO2oL_JlzmiA3n8TMp1jSVjniBVIG-OnPZVE-9hu0MkY4KafAS-ulmvXzY-WHHsUlJoM6Y3KHfHjwmwZSzbPVOEIoY"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">build</span>
+<span class="text-[10px] font-black tracking-widest uppercase text-secondary">Инженерия • Технический сервис</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-slate-900 mb-2">Техническая эксплуатация подвижного состава</h3>
+<p class="text-slate-500 text-sm max-w-2xl">Освоение диагностики и ремонта современных электропоездов. Работа с высокотехнологичным оборудованием в депо будущего.</p>
+</div>
+<div class="w-full lg:w-64 border-l border-slate-100 pl-8 flex flex-col justify-center gap-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold text-slate-400">Срок обучения:</span>
+<span class="text-sm font-bold text-slate-900">3г 10мес</span>
+</div>
+<button class="w-full py-3 bg-slate-100 text-slate-900 font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Узнать больше</button>
+</div>
+</div>
+<div class="group bg-white rounded-2xl border border-slate-200 p-6 flex flex-col lg:flex-row items-center gap-8 transition-all hover:border-primary/50 hover:shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 px-6 py-2 bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl">72% Соответствие</div>
+<div class="w-full lg:w-48 h-32 rounded-xl overflow-hidden shrink-0 grayscale hover:grayscale-0 transition-all">
+<img alt="Логист" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDonL8kl2Jf-LxdzY8KJtg_NRwYZiEhIb3XRNzG5mVtqQdfgHlUVUY1KXb2cLeDK5UZVoNHvJ6OrQjcaPbi7pMUM4lqLynqF4C4HopXznAK4blQuWP8Bm0_bujxUS59SVM2ZspuDSoh8lg5l7iKuAnfp-CThFdsA2dB-CQWLmP37o_l4dDkvV0Ynbcjq1S6oNgdLftTkdQvsu6X5_m6ZM8GaWwVy7XwoMO2ILdxHLQ21ilRwW1-PkUcQq1P0MtQii7sV95DPxN5IHQ"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">schema</span>
+<span class="text-[10px] font-black tracking-widest uppercase text-secondary">Управление • Логистика</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-slate-900 mb-2">Организация перевозок и управление</h3>
+<p class="text-slate-500 text-sm max-w-2xl">Профессия для стратегов. Управление движением целого мегаполиса, оптимизация графиков и работа в цифровых диспетчерских центрах.</p>
+</div>
+<div class="w-full lg:w-64 border-l border-slate-100 pl-8 flex flex-col justify-center gap-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold text-slate-400">Срок обучения:</span>
+<span class="text-sm font-bold text-slate-900">3г 10мес</span>
+</div>
+<button class="w-full py-3 bg-slate-100 text-slate-900 font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Узнать больше</button>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-600 hover:border-primary hover:text-primary transition-all flex items-center gap-3 mx-auto">
+                    Показать все 12 программ <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</section>
+<section class="max-w-screen-2xl mx-auto px-8 mt-24">
+<div class="bg-secondary p-12 md:p-20 rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-primary mb-6">Остались вопросы?</h2>
+<p class="text-secondary-fixed text-lg">Наши академические консультанты помогут вам сделать окончательный выбор и ответят на все вопросы о поступлении.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-md hover:scale-105 transition-all">Записаться</button>
+<button class="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-md border border-white/20 hover:bg-white/20 transition-all">Скачать буклет</button>
+</div>
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -left-20 -top-20 w-96 h-96 bg-on-secondary-container/30 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-100 py-16">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 font-body leading-relaxed text-sm">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-tighter font-headline">кмт</div>
+<p class="text-slate-500 mb-6">Профессиональное образование в сфере транспорта. Мы готовим специалистов будущего для РЖД и Московского метрополитена.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">hub</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">lan</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Отделения</h4>
+<ul class="space-y-4 text-slate-500">
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">ЖД транспорт</a></li>
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Городские системы</a></li>
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Логистика сервиса</a></li>
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Электроэнергетика</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Информация</h4>
+<ul class="space-y-4 text-slate-500">
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Приемная комиссия</a></li>
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Дни открытых дверей</a></li>
+<li><a class="hover:text-red-600 transition-colors hover:underline underline-offset-4" href="#">Карьера в колледже</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Рассылка</h4>
+<p class="text-slate-500 mb-4">Будьте в курсе событий и новых программ обучения.</p>
+<div class="flex h-11">
+<input class="bg-white border-none px-4 rounded-l-xl w-full text-xs focus:ring-2 focus:ring-primary shadow-sm" placeholder="Email адрес" type="email"/>
+<button class="bg-primary text-on-primary px-4 rounded-r-xl text-xs font-bold shadow-sm" style="">Подписаться</button>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-200 text-slate-400 text-[10px] font-bold uppercase tracking-widest flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 ГБПОУ «Колледж Московского Транспорта». Все права защищены.</p>
+<div class="flex gap-8">
+<a class="hover:text-slate-900 transition-colors" href="#">Конфиденциальность</a>
+<a class="hover:text-slate-900 transition-colors" href="#">Условия</a>
+<a class="hover:text-slate-900 transition-colors" href="#">Карта сайта</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
