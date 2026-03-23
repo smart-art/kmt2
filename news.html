@@ -1,0 +1,421 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Новости и события | Колледж Московского транспорта</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#f6f7ff",
+              "surface-bright": "#f9f9ff",
+              "on-primary-fixed": "#410002",
+              "primary": "#b70011",
+              "inverse-primary": "#ffb4ab",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#ffdad6",
+              "on-secondary-fixed-variant": "#173bab",
+              "background": "#f9f9ff",
+              "on-surface": "#121c2a",
+              "secondary-container": "#708cfd",
+              "on-primary-fixed-variant": "#93000b",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "primary-container": "#dc2626",
+              "tertiary": "#505a6a",
+              "on-surface-variant": "#5c403c",
+              "tertiary-fixed": "#d9e3f7",
+              "surface-tint": "#bf0715",
+              "secondary-fixed-dim": "#b8c4ff",
+              "on-error": "#ffffff",
+              "surface-container": "#e6eeff",
+              "secondary": "#3755c3",
+              "tertiary-container": "#687284",
+              "surface-dim": "#d0daef",
+              "on-secondary-container": "#00217a",
+              "surface-container-low": "#eff3ff",
+              "inverse-on-surface": "#ebf1ff",
+              "on-tertiary-fixed-variant": "#3d4757",
+              "on-primary-container": "#fff6f5",
+              "on-secondary-fixed": "#001453",
+              "outline": "#916f6b",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#e6bdb8",
+              "surface": "#f9f9ff",
+              "surface-container-high": "#dee9fd",
+              "inverse-surface": "#273140",
+              "secondary-fixed": "#dde1ff",
+              "on-background": "#121c2a",
+              "on-tertiary-fixed": "#121c2a",
+              "tertiary-fixed-dim": "#bdc7db",
+              "surface-variant": "#d9e3f7",
+              "surface-container-highest": "#d9e3f7",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#ffb4ab"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk", "Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        html {
+            scrollbar-gutter: stable;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(18,28,42,0.06)]">
+<div class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto w-full">
+<a class="text-2xl font-black text-red-700 dark:text-red-500 uppercase tracking-tighter font-headline hover:opacity-90 transition-opacity" href="index.html">КМТ</a>
+<div class="hidden md:flex items-center space-x-8 font-headline tracking-tight font-bold">
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="programs.html">Программы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="postuplenie.html">Поступление</a>
+<a class="text-red-700 dark:text-red-400 border-b-2 border-red-700 dark:border-red-500 pb-1" href="news.html">Новости</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="studentam.html">Студентам</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="o-kolledzhe.html">О колледже</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hidden lg:block text-slate-700 dark:text-slate-300 font-headline font-bold hover:scale-105 transition-transform" href="kontakty.html">Контакты</a>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-headline font-bold hover:scale-105 active:opacity-80 transition-all inline-flex items-center justify-center" href="postuplenie.html">Поступить</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<header class="max-w-screen-2xl mx-auto px-8 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block" style="">Жизнь колледжа</span>
+<h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter text-on-surface leading-none" style="">
+                    Новости <span class="text-primary" style="">и</span> события
+                </h1>
+</div>
+<div class="lg:col-span-4">
+<p class="text-lg text-on-surface-variant leading-relaxed mb-6" style="">
+                    Анонсы дней открытых дверей, проекты с ГУП «Московский метрополитен», «Профессионалитет» и жизнь более чем 3 тысяч студентов на площадках КМТ.
+                </p>
+</div>
+</div>
+</header>
+<!-- Featured Story (Asymmetric Bento) -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-24 scroll-mt-28" id="glavnoe">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-full">
+<!-- Main Featured Article -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low min-h-[500px] flex items-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Интерьер кабины современного поезда" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBPYpP8d5bwTK7Pqn8xGJfEExupA2oDQV9-pYtLw2RyFHXCPPZMOOE9yFIAKy4AX6_BjJG0aDB38W5FibtEs4euynFmv7TF2hl0Yau0tCyrDUK10Xa2VKJ7TVzbq3m4d9IOEvx-8Nwz7McQ4V1T2QwyG_et3lCTYmt9Mfw8nznztxYauRUpjqJR5nHQ7kyGbkNrcI-1mhne8VicJ4VYb9WTnpWrMQHZq5n9gslQ1I7rbdbVwX3manF_BX_yNHorp0O4F3B69mAZBnc&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div>
+<div class="relative p-12 w-full">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-bold uppercase tracking-widest mb-4" style="">Главное</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-white mb-4 max-w-2xl leading-tight" style="">
+                        КМТ — первый в Москве участник федерального проекта «Профессионалитет»
+                    </h2>
+<div class="flex items-center text-white/80 gap-6">
+<span class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-sm" style="">calendar_today</span> 24 окт 2024</span>
+<span class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-sm" style="">person</span> Пресс-служба</span>
+</div>
+</div>
+</div>
+<!-- Secondary Intelligence -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="flex-1 p-8 bg-surface-container-high rounded-xl flex flex-col justify-between hover:bg-surface-container-highest transition-colors">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-widest mb-2 block" style="">Абитуриентам</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4" style="">День открытых дверей и подача документов через mos.ru</h3>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group" style="">
+                        Регистрация <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 p-8 bg-on-surface rounded-xl flex flex-col justify-between text-white">
+<div>
+<span class="text-primary-container font-bold text-xs uppercase tracking-widest mb-2 block" style="">Достижения</span>
+<h3 class="text-2xl font-headline font-bold mb-4" style="">«Карьерные карты»: траектория по специальностям с работодателями</h3>
+</div>
+<a class="text-white/60 hover:text-white transition-colors" href="#" style="">Подробнее о победе</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Content Grid -->
+<section class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 scroll-mt-28" id="lenta">
+<!-- Left: News Feed -->
+<div class="lg:col-span-7">
+<div class="flex items-center justify-between mb-12 border-b border-outline-variant/20 pb-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface" style="">Свежие новости</h2>
+<div class="flex gap-4">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-surface-container-low transition-colors" style=""><span class="material-symbols-outlined" style="">filter_list</span></button>
+</div>
+</div>
+<div class="space-y-12">
+<!-- News Item 1 -->
+<article class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<div class="md:col-span-4 overflow-hidden rounded-lg aspect-[4/3]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Вид на транспортную систему города" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzPb6n0UOGq8S0hToJVOmLXkrNRrLigT-8kt4ds5NGgK1ahEjqsY_9jp4qjWxGyNlaHoBr2hF3cW9VIF3SkYs-EwEEz6YyBYwNtHfEEUvTMap7RTHA69y8vwj-znnbFc9FpW24gLl4VKzX1Dp7Fd8rD6mUV0Ca_bC9oRmCXIf9FupV2CBUxeRkw5M4l-lMx921gMuYTXU-vcOzzEncxb-53V1I2jUMQIYlHPDLyi0NLqD6djtpudFiQ2LYMkv90Xjtop3VTwdMgrs" style="">
+</div>
+<div class="md:col-span-8">
+<span class="text-xs font-bold text-tertiary uppercase mb-2 block" style="">Технологии</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-3" style="">ИТ-решения для транспорта: как ИИ меняет движение в мегаполисе</h3>
+<p class="text-on-surface-variant line-clamp-2 mb-4" style="">Наши студенты представили алгоритмы прогнозирования пассажиропотока для Московского метрополитена.</p>
+<div class="flex items-center justify-between">
+<span class="text-sm text-tertiary" style="">5 мин чтения</span>
+<span class="material-symbols-outlined text-outline-variant" style="">more_horiz</span>
+</div>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<div class="md:col-span-4 overflow-hidden rounded-lg aspect-[4/3]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Инженерные разработки" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOYXp1p3LsDMa_21n_yhMQm6OwxufjuCqN6JtD9mzVWW4yjSRG3-WkEolp-MhdqFONJCmwnx1AFTry4nvVjaJ4KQokz3olZkubiiWdoD5fSQfbCQZCahRPItxq0RQWbJxb42y4oAGktWtTMN4vezmDsIswK07wVJ8c9vom0AuxdsmZ-XIhOIMm7pV1ajnnHbhkSYuM7Ev_Mm843Bb1M4QyIuAN0SYvysCNGn910pj_gigSRdkrzhcVpPwJm3Y5iPeo9ZWFoqMCwME" style="">
+</div>
+<div class="md:col-span-8">
+<span class="text-xs font-bold text-tertiary uppercase mb-2 block" style="">Практика</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-3" style="">Старт производственной практики в депо нового поколения</h3>
+<p class="text-on-surface-variant line-clamp-2 mb-4" style="">Второкурсники приступили к работе с новейшими составами «Москва-2024» под руководством экспертов.</p>
+<div class="flex items-center justify-between">
+<span class="text-sm text-tertiary" style="">3 мин чтения</span>
+<span class="material-symbols-outlined text-outline-variant" style="">more_horiz</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Right: Events Schedule -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 scroll-mt-32" id="sobytiya">
+<div class="flex items-center justify-between mb-8 border-b border-outline-variant/20 pb-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface" style="">Предстоящие события</h2>
+<span class="text-slate-500 text-sm font-body">Актуальное расписание — в приёмной комиссии</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-8 leading-relaxed">Расписание ориентировочное; даты и адреса уточняйте в приёмной комиссии.</p>
+<!-- Группы событий -->
+<div class="space-y-10">
+<div>
+<h3 class="text-xs font-headline font-bold uppercase tracking-widest text-secondary mb-4" style="">Послезавтра</h3>
+<div class="space-y-3">
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">25</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Архитектор путей и тоннелей метро</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 09:00 — 30 апр, 14:30</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Бульвар Рокоссовского, ул. Бойцовая, д. 6, корп. 8Б</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">25</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">В мире профессий. Организация перевозок</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 11:00 — 30 апр, 16:30</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Бульвар Рокоссовского, ул. Бойцовая, д. 6, корп. 8Б</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">25</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Создай безопасность метро своими руками</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 13:00 — 29 апр, 14:30</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Комсомольская, ул. Каланчевская, д. 26, стр. 1</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">25</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Интерактивный транспортный квест</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:40 — 29 апр, 18:10</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Комсомольская, ул. Каланчевская, 26, стр. 1</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">25</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Секреты управления поездом</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:40 — 30 апр, 18:10</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> Адрес уточняйте в приёмной комиссии</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xs font-headline font-bold uppercase tracking-widest text-secondary mb-4" style="">На следующей неделе</h3>
+<div class="space-y-3">
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">31</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest" style="">День открытых дверей</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Узнай всё о КМТ</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:00 — 18:00</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> Напольный проезд, д. 7</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">апр</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">4</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest" style="">День открытых дверей</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Узнай всё о КМТ</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 10:00 — 12:00</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> Напольный проезд, д. 7</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xs font-headline font-bold uppercase tracking-widest text-secondary mb-4" style="">Позже</h3>
+<div class="space-y-3">
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">28</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest" style="">День открытых дверей</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Узнай всё о КМТ</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 10:00 — 12:00</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> ул. Каланчевская, д. 26</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">26</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Складская головоломка: маркировка и логистика</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 13:00 — 30 апр, 16:30</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Бульвар Рокоссовского, ул. Бойцовая, д. 6, корп. 8Б</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">26</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Сила, которая движет миром</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:40 — 28 апр, 18:10</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Водный стадион / МЦК Коптево, ул. Михалковская, д. 52</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">26</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Диагностика электрического двигателя</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:40 — 30 апр, 18:10</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Водный стадион / МЦК Коптево, ул. Михалковская, д. 52</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-all">
+<div class="flex flex-col items-center justify-center min-w-[56px] py-2 bg-white rounded-lg shadow-sm border border-outline-variant/10 shrink-0">
+<span class="text-[10px] font-bold text-primary uppercase" style="">мар</span>
+<span class="text-2xl font-headline font-black text-on-surface leading-none" style="">26</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest" style="">Профессиональные пробы</span>
+<h4 class="text-base font-headline font-bold text-on-surface mt-1 mb-1" style="">Подвижной состав в руках профессионалов</h4>
+<p class="text-xs text-on-surface-variant flex items-start gap-1 mb-1"><span class="material-symbols-outlined text-[16px] shrink-0">schedule</span> 16:40 — 30 апр, 18:10</p>
+<p class="text-xs text-on-surface-variant flex items-start gap-1"><span class="material-symbols-outlined text-[16px] shrink-0">location_on</span> м. Комсомольская, ул. Каланчевская, д. 26, стр. 1</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Newsletter Sidebar -->
+<div class="mt-12 p-8 bg-primary rounded-xl text-on-primary">
+<h4 class="text-2xl font-headline font-bold mb-4 leading-tight" style="">Будьте в центре событий КМТ.</h4>
+<p class="text-on-primary/80 mb-6 text-sm" style="">Подпишитесь на нашу рассылку, чтобы первыми узнавать о важных событиях в мире транспорта.</p>
+<div class="flex flex-col gap-3">
+<input class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none" placeholder="Email" type="email">
+<button class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-slate-50 transition-colors" style="">Подписаться на новости</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 font-['Inter'] leading-relaxed text-sm w-full rounded-none tonal-shift from surface to surface-container-low py-16 scroll-mt-28" id="kontakty">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-6 block hover:text-red-600 transition-colors" href="index.html" style="">Колледж Московского транспорта</a>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs" style="">Ведущее образовательное учреждение по подготовке кадров для транспортной системы столицы.</p>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-widest text-xs" style="">Подразделения</h5>
+<ul class="space-y-4">
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="programs.html#spisok-programm" style="">Железнодорожный транспорт</a></li>
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="programs.html#spisok-programm" style="">Логистика</a></li>
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="programs.html#spisok-programm" style="">ИТ-технологии</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-widest text-xs" style="">Информация</h5>
+<ul class="space-y-4">
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="postuplenie.html" style="">Абитуриентам</a></li>
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="studentam.html" style="">Студентам</a></li>
+<li class="" style=""><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline-offset-4 hover:underline transition-all" href="news.html#lenta" style="">Карьера</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-widest text-xs" style="">Контакты</h5>
+<p class="text-slate-500 dark:text-slate-400" style="">Каланчевская, 26 · Бойцовая, 6 к. 8Б · Напольный пр., 7 · Михалковская, 52<br><a class="text-primary hover:underline font-semibold" href="tel:+74953000400">8 (495) 3000-400</a> · <a class="text-primary hover:underline" href="mailto:priem@kmt.moscow">Написать в приёмную</a><br>пн–пт 9:00–17:00</p>
+<div class="mt-6 flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" style="">share</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" style="">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-center" style="">
+        © 2024 ГБПОУ «Колледж Московского транспорта». Все права защищены.
+    </div>
+</footer>
+</body></html>
