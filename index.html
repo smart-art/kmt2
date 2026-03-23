@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html class="light" lang="ru"><head>
+<html class="light scroll-smooth" lang="ru"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Колледж Московского транспорта</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -61,7 +62,7 @@
               "primary-fixed-dim": "#ffb4ab"
             },
             fontFamily: {
-              "headline": ["Space Grotesk", "sans-serif"],
+              "headline": ["Space Grotesk", "Inter", "sans-serif"],
               "body": ["Inter", "sans-serif"],
               "label": ["Inter", "sans-serif"]
             },
@@ -71,6 +72,9 @@
       }
     </script>
 <style>
+        html {
+            scrollbar-gutter: stable;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -78,35 +82,26 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
-        /* Override default body font to Inter but maintain Space Grotesk for UI as requested */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .font-headline {
-            font-family: 'Space Grotesk', sans-serif;
+        #reviews-track {
+            will-change: transform;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
+<body class="bg-surface font-body text-on-surface antialiased">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(18,28,42,0.06)]">
 <div class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto w-full">
-<div class="text-2xl font-black text-red-700 dark:text-red-500 uppercase tracking-tighter font-headline">
-            КМТ
-        </div>
+<a class="text-2xl font-black text-red-700 dark:text-red-500 uppercase tracking-tighter font-headline hover:opacity-90 transition-opacity" href="index.html">КМТ</a>
 <div class="hidden md:flex items-center space-x-8 font-headline tracking-tight font-bold">
-<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="#">Программы</a>
-<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="#">Поступление</a>
-<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="#">Студентам</a>
-<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="#">Карьера</a>
-<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="#">О колледже</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="programs.html">Программы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="postuplenie.html">Поступление</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="news.html">Новости</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="studentam.html">Студентам</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" href="o-kolledzhe.html">О колледже</a>
 </div>
 <div class="flex items-center space-x-4">
-<button class="hidden lg:block text-slate-700 font-headline font-bold hover:scale-105 transition-transform">Контакты</button>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-headline font-bold hover:scale-105 active:opacity-80 transition-all">
-                Поступить
-            </button>
+<a class="hidden lg:block text-slate-700 dark:text-slate-300 font-headline font-bold hover:scale-105 transition-transform" href="kontakty.html">Контакты</a>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-headline font-bold hover:scale-105 active:opacity-80 transition-all inline-flex items-center justify-center" href="postuplenie.html">Поступить</a>
 </div>
 </div>
 </nav>
@@ -120,35 +115,38 @@
 <div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
 <div class="max-w-3xl">
 <span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/20 border border-primary/30 text-primary-fixed font-headline font-bold tracking-widest text-xs uppercase">
-                    Колледж Московского Транспорта
+                    ГБПОУ «Колледж Московского транспорта»
                 </span>
 <h1 class="text-6xl md:text-8xl font-headline font-black text-white leading-[0.9] tracking-tighter mb-8">
                     ТВОЙ СТАРТ <br/> <span class="text-primary-container">В БУДУЩЕЕ.</span>
 </h1>
-<p class="text-xl text-slate-300 mb-10 max-w-xl leading-relaxed font-body">
-                    Обучение по востребованным специальностям в сфере железнодорожного и городского транспорта Москвы.
+<p class="text-xl text-slate-300 mb-4 max-w-xl leading-relaxed font-body">
+                    Более 100 лет готовим специалистов для транспортной отрасли Москвы. На площадках колледжа обучаются более 3 тысяч студентов.
+                </p>
+<p class="text-sm text-slate-400 mb-10 max-w-xl font-headline font-bold tracking-wide uppercase">
+                    Стратегический партнёр — ГУП «Московский метрополитен»
                 </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline font-bold text-lg hover:scale-105 active:opacity-80 transition-all flex items-center gap-2">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline font-bold text-lg hover:scale-105 active:opacity-80 transition-all flex items-center gap-2" href="postuplenie.html">
                         Поступить
                         <span class="material-symbols-outlined">trending_flat</span>
-</button>
-<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-md font-headline font-bold text-lg hover:bg-white/20 transition-all">
+</a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-md font-headline font-bold text-lg hover:bg-white/20 transition-all inline-flex items-center justify-center" href="programs.html">
                         Выбрать специальность
-                    </button>
+                    </a>
 </div>
 </div>
 </div>
 </section>
 <!-- Specialties - Bento Grid -->
-<section class="py-24 bg-surface">
+<section class="py-24 bg-surface scroll-mt-24" id="napravleniya">
 <div class="max-w-screen-2xl mx-auto px-8">
 <div class="flex justify-between items-end mb-16">
 <div class="max-w-2xl">
 <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tighter text-on-surface mb-4">
                         ТЕХНИЧЕСКИЕ СПЕЦИАЛЬНОСТИ
                     </h2>
-<p class="text-slate-500 text-lg font-body">Освойте системы, которые приводят в движение мегаполис каждый день.</p>
+<p class="text-slate-500 text-lg font-body">Техническое обслуживание подвижного состава, организация движения поездов, сервис для пассажиров, электромонтаж и смежные профессии — ключевые направления подготовки в колледже.</p>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
@@ -157,8 +155,8 @@
 <div class="relative z-10 flex flex-col h-full justify-between">
 <span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">subway</span>
 <div>
-<h3 class="text-3xl font-headline font-bold mb-2">Московский Метрополитен</h3>
-<p class="text-white/80 max-w-sm font-body">Эксплуатация подвижного состава, системы автоматики и телемеханики крупнейшего метро мира.</p>
+<h3 class="text-3xl font-headline font-bold mb-2">Московский метрополитен</h3>
+<p class="text-white/80 max-w-sm font-body">Со стратегическим партнёром развиваем проект «Нам с тобой по пути»: практика и раннее трудоустройство на базе метрополитена.</p>
 </div>
 </div>
 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -172,8 +170,8 @@
 <span class="material-symbols-outlined text-3xl">train</span>
 </div>
 <div>
-<h3 class="text-xl font-headline font-bold">Железнодорожный транспорт</h3>
-<p class="text-slate-500 text-sm font-body">Организация перевозок и управление на транспорте.</p>
+<h3 class="text-xl font-headline font-bold">Железнодорожный и городской транспорт</h3>
+<p class="text-slate-500 text-sm font-body">В том числе помощник машиниста, техническая эксплуатация состава, организация перевозок.</p>
 </div>
 </div>
 <span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">arrow_forward_ios</span>
@@ -194,15 +192,15 @@
 </div>
 </section>
 <!-- Latest News -->
-<section class="py-24 bg-surface-container-low">
+<section class="py-24 bg-surface-container-low scroll-mt-24" id="vesti">
 <div class="max-w-screen-2xl mx-auto px-8">
 <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
 <h2 class="text-4xl font-headline font-black tracking-tighter text-on-surface uppercase">
                     ВЕСТИ КОЛЛЕДЖА
                 </h2>
-<button class="flex items-center gap-2 text-primary font-headline font-bold hover:underline underline-offset-8">
+<a class="flex items-center gap-2 text-primary font-headline font-bold hover:underline underline-offset-8" href="news.html">
                     ВСЕ НОВОСТИ <span class="material-symbols-outlined">north_east</span>
-</button>
+</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 <!-- News Item 1 -->
@@ -211,10 +209,10 @@
 <img alt="Лаборатория КМТ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Students working in a modern clean laboratory with high-tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI8nXZ4dmT-aowY5Rbj9gtLBwZcGIg0bmj7xzCNdSZPElmPhi9bQCi6cxM9uEbDMGpagEoHzM1fcXMmPbPvh-ZinJi63ZC23m5K6jU2LbyJ01eIKZ4M7Mrgf-djbemo1ED-73nX3TOVc1P8MIkjT5Ce5LPQ60-LEp2jkgM1vQFkLUzujNlbUJMbbKQYW7IJ7TDsi0EfXaSuU7HB5irz7UNKAGVfkcNL-hMIoK-n9vvT6S8OBtMb-37QExJ9tfkOBdK_yS-Xk4UH2Y"/>
 <div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-headline font-bold px-3 py-1 rounded-full uppercase tracking-widest">Практика</div>
 </div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Новые тренажеры «Москва-2024» установлены в КМТ</h3>
-<p class="text-slate-500 leading-relaxed font-body">Студенты теперь могут практиковаться на новейшем оборудовании, полностью имитирующем кабину машиниста метро...</p>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">КМТ — участник федерального проекта «Профессионалитет»</h3>
+<p class="text-slate-500 leading-relaxed font-body">С 1 сентября 2022 года колледж стал первым участником проекта среди профессиональных организаций Москвы; на практике со студентами заключают трудовые договоры с ГУП «Московский метрополитен».</p>
 <div class="mt-4 flex items-center gap-4 text-xs font-headline font-bold text-slate-400 uppercase tracking-widest">
-<span>24 Окт 2024</span>
+<span>Проект</span>
 <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
 <span>4 мин чтения</span>
 </div>
@@ -225,10 +223,10 @@
 <img alt="Транспорт Москвы" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Aerial view of complex highway interchange with light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5177SL7neBe46H04kEeCMfKMjgI6LhO1OgDwYPtn5U1Hb9TT2HPoIEszyvvpT6rGoh4MHYKcULcZXaxnElp_j2CpAFXzMP6MI2MZp-KL-m87Pm53rmvE1rcqeAe36YPay3lCI2UW6BbMty3UtFb-Knb7IFrsL_ah-aWWOmXc1kLNiBo16_LL3XGuByPVb0Mj_enydC343MJKJ3AOMrqTv9IPe0XbRZB9jGYshasbV9ZC_K0967Glm4EWIjxBcL6LTYf5lhU-ahac"/>
 <div class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-headline font-bold px-3 py-1 rounded-full uppercase tracking-widest">Карьера</div>
 </div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">День карьеры с Московским Транспортом</h3>
-<p class="text-slate-500 leading-relaxed font-body">Более 50 вакансий от ведущих работодателей отрасли были представлены нашим выпускникам на ежегодной встрече.</p>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">«Карьерные карты» с работодателями</h3>
+<p class="text-slate-500 leading-relaxed font-body">Подробную траекторию по специальностям и профессиям можно изучить по карьерным картам, подготовленным совместно с работодателями колледжа.</p>
 <div class="mt-4 flex items-center gap-4 text-xs font-headline font-bold text-slate-400 uppercase tracking-widest">
-<span>21 Окт 2024</span>
+<span>Карьера</span>
 <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
 <span>6 мин чтения</span>
 </div>
@@ -239,10 +237,10 @@
 <img alt="Абитуриенты" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Large scale infrastructure construction site with heavy machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LE1F_VWuwcedAptOnHTHJor7wZ5gsn9JTNi4x8BDuX9LvgAyYSDieHBn_yyHD_JKAcqKrAX8DS_3JfINiUhGjsHWdJZHyI7weERWFUjLtMWOFdaZiZ9_8tR9nLxLvAeMD2WzAv7un9JmxxSrmUAv_pMpGmcwXsKJKlIZpVCEwxPUmtJNgcTQ7j37lyRrYqCMV1gIP2H3fhWXwcbZD8WLYOe1NXqd8KRkOr_QtTLqE2a8OK7gGVKRl2EHcy-Escec1rHj4BbdnEM"/>
 <div class="absolute top-4 left-4 bg-tertiary-container text-white text-[10px] font-headline font-bold px-3 py-1 rounded-full uppercase tracking-widest">Абитуриенту</div>
 </div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Старт приемной кампании: Бюджетные места 2025</h3>
-<p class="text-slate-500 leading-relaxed font-body">Открыт прием заявок на обучение. Узнайте о правилах подачи документов и проходных баллах в этом году.</p>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Подача заявлений через mos.ru</h3>
+<p class="text-slate-500 leading-relaxed font-body">И на бюджет, и на договор подача осуществляется через портал mos.ru. При трудностях можно обратиться в «Центр поддержки школьников» в своей школе.</p>
 <div class="mt-4 flex items-center gap-4 text-xs font-headline font-bold text-slate-400 uppercase tracking-widest">
-<span>18 Окт 2024</span>
+<span>Абитуриенту</span>
 <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
 <span>2 мин чтения</span>
 </div>
@@ -250,92 +248,65 @@
 </div>
 </div>
 </section>
-<!-- Testimonials -->
-<section class="py-24 bg-surface">
+<!-- Testimonials (отзывы с официального сайта kmt.moscow/#reviews, источники — Яндекс и Google Карты) -->
+<section class="py-24 bg-surface scroll-mt-24" id="studentam">
 <div class="max-w-screen-2xl mx-auto px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 <div class="lg:col-span-4">
 <h2 class="text-5xl font-headline font-black tracking-tighter text-on-surface mb-6 leading-tight uppercase">
                         МНЕНИЯ <br/> СТУДЕНТОВ.
                     </h2>
+<p class="text-sm text-slate-500 font-body mb-6 max-w-sm">Все отзывы реальные; на <a class="text-primary font-headline font-bold hover:underline" href="https://kmt.moscow/#reviews" rel="noopener noreferrer" target="_blank">kmt.moscow</a> указаны источники — Яндекс Карты и Google Карты.</p>
+<div class="flex flex-wrap items-center gap-4">
+<div class="flex gap-2" id="reviews-dots" role="tablist" aria-label="Страницы отзывов"></div>
 <div class="flex gap-4">
-<button class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
+<button type="button" id="reviews-prev" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Предыдущие отзывы">
+<span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
 </button>
-<button class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
-<span class="material-symbols-outlined">arrow_forward</span>
+<button type="button" id="reviews-next" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Следующие отзывы">
+<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
 </button>
 </div>
 </div>
-<div class="lg:col-span-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Card 1 -->
-<div class="bg-surface-container-low p-10 rounded-xl relative">
-<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-8 right-8">format_quote</span>
-<p class="text-lg text-on-surface-variant font-body font-medium leading-relaxed mb-8 relative z-10">
-                                "Лаборатории здесь — это не симуляция, а реальное оборудование, которое используется в метро. Переход от учебы к работе прошел абсолютно естественно."
-                            </p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-300">
-<img alt="Студент" class="w-full h-full object-cover rounded-full" data-alt="Professional portrait of a young male student in laboratory attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ohHWEOZlPqDDXnCgiWxHOOFaPy9Hagti9A0B8aJmZF7wslr-hxLMsmwUHAIjV3kzr_dg0zgGnyTlwFOUUg9ccj_LKBxpAUKQ7DUA4DEUucVHDCPtm85OxbtMk7jtzrVwVn47Gj_QWMebb4L558N02XVny8shIeRESEhIirvfkpBOlmDbWD1X7wD1LN8ecZQF0tfAwI0zuekVyaL9vkccUEsnvSEK4ua9wcAjICK-OFcpwz9wKxEqT8YMgM3xqqVz8OsdGEBlD58"/>
 </div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Алексей Смирнов</h4>
-<p class="text-xs text-slate-500 uppercase font-headline font-bold tracking-widest">Выпуск '23, Машинист</p>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-white p-10 rounded-xl shadow-[0px_20px_40px_rgba(18,28,42,0.06)] relative border border-slate-100">
-<span class="material-symbols-outlined text-secondary/20 text-6xl absolute top-8 right-8">format_quote</span>
-<p class="text-lg text-on-surface-variant font-body font-medium leading-relaxed mb-8 relative z-10">
-                                "Сотрудничество колледжа с Московским Метрополитеном означает, что у меня было гарантированное место для практики уже на втором курсе."
-                            </p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-300">
-<img alt="Студентка" class="w-full h-full object-cover rounded-full" data-alt="Professional portrait of a female student engineer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDppMfBz1Y8Bjtu7-y4fhbG1Ayd2BBzDVFp6z1VKdIynJ4gMwDHfiX7gmozdfmEEeEBMmXZI6-vDKGovLxCNeMGulvaPQ0TXOXPeldlBGQshPVo7tVHvRha7iHuGmZboWJCWND8HPQSqKwRWWFTZZmT9Hkh7f3xtRTBPPy9GPDoXqS3G15IWA8xlNUdRjBpqP1nAwFYS_F75-LPO95PoFbrcUNEXVr_YXZttydyuXGWE4cr3xUKRy101nVOSTuOQPp0IgeKr0fFWcA"/>
-</div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Марина Иванова</h4>
-<p class="text-xs text-slate-500 uppercase font-headline font-bold tracking-widest">Выпуск '24, Логистика</p>
-</div>
-</div>
-</div>
+<div class="lg:col-span-8 min-w-0">
+<div class="overflow-hidden rounded-xl" id="reviews-viewport" aria-live="polite">
+<div class="flex w-full transition-transform duration-500 ease-out" id="reviews-track"></div>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Call to Action -->
-<section class="py-24 bg-primary text-on-primary">
+<section class="py-24 bg-primary text-on-primary scroll-mt-24" id="postuplenie">
 <div class="max-w-screen-2xl mx-auto px-8 text-center">
 <h2 class="text-5xl md:text-7xl font-headline font-black mb-8 tracking-tighter uppercase">
                 ГОТОВ СТАТЬ <br/> ЧАСТЬЮ КОМАНДЫ?
             </h2>
 <p class="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed font-body">
-                Приемная кампания на 2025 год уже идет. Забронируй свое место в самом современном транспортном колледже столицы.
+                Выпускники получают диплом государственного образца о среднем профессиональном образовании. Подать заявление можно на бюджет и по договору через портал mos.ru — подробности в приёмной комиссии.
             </p>
 <div class="flex flex-col sm:flex-row justify-center gap-6">
-<button class="bg-white text-primary px-10 py-5 rounded-md font-headline font-bold text-xl hover:scale-105 active:opacity-90 transition-all">
+<a class="bg-white text-primary px-10 py-5 rounded-md font-headline font-bold text-xl hover:scale-105 active:opacity-90 transition-all inline-flex items-center justify-center" href="postuplenie.html">
                     Поступить
-                </button>
-<button class="border-2 border-white text-white px-10 py-5 rounded-md font-headline font-bold text-xl hover:bg-white/10 transition-all">
+                </a>
+<a class="border-2 border-white text-white px-10 py-5 rounded-md font-headline font-bold text-xl hover:bg-white/10 transition-all inline-flex items-center justify-center" href="programs.html#pomoshchnik-postupleniya">
                     Узнать больше
-                </button>
+                </a>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-slate-100 dark:bg-slate-950 pt-20 pb-10">
+<footer class="bg-slate-100 dark:bg-slate-950 pt-20 pb-10 scroll-mt-24" id="kontakty-index">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 py-16 px-8 max-w-screen-2xl mx-auto border-b border-slate-200 dark:border-slate-800">
 <div class="md:col-span-1">
-<div class="text-xl font-headline font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-tighter">КМТ</div>
+<a class="text-xl font-headline font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-tighter block hover:text-red-600 transition-colors" href="index.html">КМТ</a>
 <p class="text-slate-500 text-sm leading-relaxed mb-8 font-body">
-                Определяем движение будущего через качественное образование и передовые технологии московского транспорта.
+                Созданы более 60 кружков и секций дополнительного образования; реализуются программы допквалификации по техническим профессиям отрасли.
             </p>
 <div class="flex space-x-4">
-<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition-colors" href="#">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition-colors" href="kontakty.html" title="Контакты">
 <span class="material-symbols-outlined text-lg">public</span>
 </a>
 <a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition-colors" href="#">
@@ -346,19 +317,19 @@
 <div>
 <h4 class="font-headline font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-widest text-xs">Направления</h4>
 <ul class="space-y-4 font-body leading-relaxed text-sm">
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Метрополитен</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Ж/Д транспорт</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Электробусы</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">ИТ и связь</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="programs.html#spisok-programm">Метрополитен</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="programs.html#spisok-programm">Ж/Д транспорт</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="programs.html#spisok-programm">Электробусы</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="programs.html#spisok-programm">ИТ и связь</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-headline font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-widest text-xs">Ссылки</h4>
 <ul class="space-y-4 font-body leading-relaxed text-sm">
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Приемная комиссия</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Стипендии</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Карта кампуса</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Трудоустройство</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="postuplenie.html">Приемная комиссия</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="studentam.html#stipendii">Стипендии</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="kontakty.html#karta">Карта кампуса</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="news.html#lenta">Трудоустройство</a></li>
 </ul>
 </div>
 <div>
@@ -367,7 +338,7 @@
 <li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Политика конфиденциальности</a></li>
 <li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Доступная среда</a></li>
 <li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Документы</a></li>
-<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="#">Обратная связь</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-red-600 transition-colors" href="kontakty.html">Обратная связь</a></li>
 </ul>
 </div>
 </div>
@@ -377,4 +348,138 @@
         </p>
 </div>
 </footer>
+<script>
+(function () {
+  var REVIEWS = [
+    { name: 'Кирилл', date: '12.05.2022', role: 'Студент', text: 'Я студент 2 курса на специальности «Организация перевозок и управление на транспорте». Я очень горжусь тем, что поступил в этот колледж, мне нравится здесь учиться, нравится подход преподавателей к студентам, нравится, как они выполняют свою работу и всё доходчиво объясняют. А ещё в колледже очень тёплая и хорошая атмосфера.' },
+    { name: 'Лариса', date: '07.04.2022', role: 'Автор отзыва', text: 'Прекрасное учебное заведение, с дисциплиной и уважительным отношением внутри коллектива.' },
+    { name: 'Николай', date: '28.03.2022', role: 'Автор отзыва', text: 'Колледж готовит высококлассных специалистов железнодорожного и городского транспорта. Материальная база хорошая и постоянно пополняется.' },
+    { name: 'Александр', date: '17.03.2022', role: 'Студент', text: 'Очень нравится учиться в нашем колледже. Наши педагоги — специалисты своих направлений, всё грамотно объясняют и, если понадобится, то повторят. Правда, не всегда хватает времени, но это тоже не проблема, после пар могут ещё раз объяснить.' },
+    { name: 'Мария', date: '04.02.2022', role: 'Родитель', text: 'Педагоги очень хорошие. Отношение к ученикам великолепное, система преподавания современная. Всегда помогут, подскажут и подтянут ребёнка в учёбе.' },
+    { name: 'Евгений', date: '28.01.2022', role: 'Автор отзыва', text: 'Этот колледж — хороший выбор! Работают только профессионалы, смело поступайте сюда, не пожалеете.' },
+    { name: 'Илья', date: '08.12.2021', role: 'Студент', text: 'В КЖГТ в первую очередь мне нравится педагогический состав, все преподаватели — это просто профессионалы своего дела, у преподавателей спецпредметов очень интересно сидеть на парах, так как они все пришли в наш колледж с железной дороги и у них очень много интересных и весёлых историй. Ещё хотелось бы сказать, что нравится дисциплина.' },
+    { name: 'Азамат', date: '30.11.2021', role: 'Студент', text: 'Отличное учебное заведение! Преподавательский состав очень хороший и отзывчивый! Физика, математика, химия, история, обществознание — на высшем уровне.' },
+    { name: 'Никита', date: '18.11.2021', role: 'Студент', text: 'Современное учебное заведение с просторными аудиториями, оснащённые лаборатории, высокий уровень преподавательского и тренерского состава. На территории колледжа есть футбольное поле, большой баскетбольный зал.' },
+    { name: 'Андрей', date: '30.09.2021', role: 'Выпускник', text: 'Отличный колледж. Лучшие годы жизни прошли тут 2012–2015 гг. Хорошие преподаватели, спасибо им за всё, чему меня научили. Советую поступать тем, кто хочет начать карьеру по специальности на РЖД.' },
+    { name: 'Ольга', date: '30.06.2021', role: 'Родитель', text: 'В приёмной комиссии очень приятные люди. Моему сыну подсказали что и как. Спасибо огромное. Отношение к родителям и поступающим отличное. Я благодарна всем вам.' },
+    { name: 'Александр', date: '13.05.2021', role: 'Автор отзыва', text: 'Отличный колледж. Спасибо огромное педагогическому коллективу за профессионализм. Отдельное спасибо Суюнчалиевой Хамиде Аватовне за оперативную обратную связь и индивидуальный подход к своим студентам.' }
+  ];
+
+  function initial(name) {
+    return (name && name.charAt(0)) ? name.charAt(0).toUpperCase() : '?';
+  }
+
+  function chunk(arr, size) {
+    var out = [];
+    for (var i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+    return out;
+  }
+
+  function cardHtml(r, idx) {
+    var alt = idx % 2 === 0;
+    var wrap = alt
+      ? 'bg-surface-container-low p-10 rounded-xl relative'
+      : 'bg-white dark:bg-slate-900 p-10 rounded-xl shadow-[0px_20px_40px_rgba(18,28,42,0.06)] relative border border-slate-100 dark:border-slate-800';
+    var q = alt ? 'text-primary/20' : 'text-secondary/20';
+    var av = alt ? 'bg-secondary/30 text-on-secondary-container' : 'bg-primary/20 text-primary';
+    return (
+      '<div class="' + wrap + '">' +
+      '<span class="material-symbols-outlined ' + q + ' text-6xl absolute top-8 right-8" aria-hidden="true">format_quote</span>' +
+      '<p class="text-amber-500 text-sm mb-3 relative z-10 tracking-widest" aria-hidden="true">★★★★★</p>' +
+      '<p class="text-lg text-on-surface-variant font-body font-medium leading-relaxed mb-8 relative z-10">«' + escapeHtml(r.text) + '»</p>' +
+      '<div class="flex items-center gap-4">' +
+      '<div class="w-12 h-12 rounded-full ' + av + ' flex items-center justify-center font-headline font-black text-lg">' + escapeHtml(initial(r.name)) + '</div>' +
+      '<div>' +
+      '<h4 class="font-headline font-bold text-on-surface">' + escapeHtml(r.name) + '</h4>' +
+      '<p class="text-xs text-slate-500 uppercase font-headline font-bold tracking-widest">' + escapeHtml(r.role) + ', ' + escapeHtml(r.date) + '</p>' +
+      '</div></div></div>'
+    );
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  var track = document.getElementById('reviews-track');
+  var prevBtn = document.getElementById('reviews-prev');
+  var nextBtn = document.getElementById('reviews-next');
+  var dotsEl = document.getElementById('reviews-dots');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  var perSlide = 2;
+  var pages = chunk(REVIEWS, perSlide);
+  var page = 0;
+
+  function render() {
+    track.innerHTML = pages.map(function (pair, pageIdx) {
+      return (
+        '<div class="min-w-full w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8">' +
+        pair.map(function (r, i) { return cardHtml(r, pageIdx * perSlide + i); }).join('') +
+        '</div>'
+      );
+    }).join('');
+
+    if (dotsEl) {
+      dotsEl.innerHTML = pages.map(function (_, i) {
+        var on = i === page;
+        return '<button type="button" class="reviews-dot h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
+          (on ? 'w-8 bg-primary' : 'w-2.5 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400') + '" data-index="' + i + '" aria-label="Отзывы, страница ' + (i + 1) + ' из ' + pages.length + '" aria-current="' + (on ? 'true' : 'false') + '"></button>';
+      }).join('');
+      dotsEl.querySelectorAll('.reviews-dot').forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          go(parseInt(dot.getAttribute('data-index'), 10));
+        });
+      });
+    }
+    updateTransform();
+  }
+
+  function updateDots() {
+    if (!dotsEl) return;
+    dotsEl.querySelectorAll('.reviews-dot').forEach(function (dot, i) {
+      var on = i === page;
+      dot.setAttribute('aria-current', on ? 'true' : 'false');
+      dot.className = 'reviews-dot h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
+        (on ? 'w-8 bg-primary' : 'w-2.5 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400');
+    });
+  }
+
+  function updateTransform() {
+    track.style.transform = 'translateX(-' + page * 100 + '%)';
+    updateDots();
+  }
+
+  function go(n) {
+    page = (n + pages.length) % pages.length;
+    updateTransform();
+  }
+
+  prevBtn.addEventListener('click', function () { go(page - 1); });
+  nextBtn.addEventListener('click', function () { go(page + 1); });
+
+  var mq = window.matchMedia('(max-width: 767px)');
+  function applyPerSlide() {
+    var nextPer = mq.matches ? 1 : 2;
+    if (nextPer === perSlide) return;
+    perSlide = nextPer;
+    pages = chunk(REVIEWS, perSlide);
+    page = Math.min(page, pages.length - 1);
+    render();
+  }
+
+  if (typeof mq.addEventListener === 'function') {
+    mq.addEventListener('change', applyPerSlide);
+  } else {
+    mq.addListener(applyPerSlide);
+  }
+
+  perSlide = mq.matches ? 1 : 2;
+  pages = chunk(REVIEWS, perSlide);
+  render();
+})();
+</script>
 </body></html>
